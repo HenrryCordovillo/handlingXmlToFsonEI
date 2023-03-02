@@ -41,6 +41,5 @@ export class AppComponent {
       ignoreComment: true,
       spaces: 2,
     });
-    console.log(xml);
   }
 }
