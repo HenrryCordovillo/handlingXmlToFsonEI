@@ -1,6 +1,19 @@
-<div>
-  <pre
-    >{{ this.xmlString }} 
-</pre
-  >
-</div>
+<h5>Horizontal</h5>
+<p-splitter styleClass="mb-5">
+  <ng-template pTemplate>
+    <div class="col flex align-items-center justify-content-center">
+      <pre>
+        {{ factura | json }}
+        </pre
+      >
+    </div>
+  </ng-template>
+  <ng-template pTemplate>
+    <div class="col flex align-items-center justify-content-center">
+      <pre>
+          {{ this.xmlTransformado }}
+          </pre
+      >
+    </div>
+  </ng-template>
+</p-splitter>
