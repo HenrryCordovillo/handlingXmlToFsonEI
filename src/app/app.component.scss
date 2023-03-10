@@ -1,0 +1,11 @@
+:host ::ng-deep {
+  .panel-splitter.p-splitter {
+    .p-splitter-panel {
+      background-color: rgb(74, 67, 67);
+      color: white;
+      overflow-y: scroll;
+
+    }
+    height: 50rem;
+  }
+}

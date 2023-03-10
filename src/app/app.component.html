@@ -1,19 +1,18 @@
 <h5>Horizontal</h5>
-<p-splitter styleClass="mb-5">
+<p-splitter styleClass="panel-splitter">
   <ng-template pTemplate>
-    <div class="col flex align-items-center justify-content-center">
-      <pre>
-        {{ factura | json }}
-        </pre
-      >
-    </div>
+    <pre>{{ facturaBackEnd | json }}</pre>
   </ng-template>
   <ng-template pTemplate>
-    <div class="col flex align-items-center justify-content-center">
-      <pre>
+    <pre>
+        {{ facturaJSON | json }}
+        </pre
+    >
+  </ng-template>
+  <ng-template pTemplate>
+    <pre>
           {{ this.xmlTransformado }}
           </pre
-      >
-    </div>
+    >
   </ng-template>
 </p-splitter>

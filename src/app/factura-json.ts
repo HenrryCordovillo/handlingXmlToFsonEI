@@ -5,45 +5,47 @@ export interface FacturaJSON {
       encoding: string;
     };
   };
-  factura: {
-    _attributes: {
-      id: string;
-      version: string;
+  factura: factura;
+}
+
+export interface factura {
+  _attributes: {
+    id: string;
+    version: string;
+  };
+  infoTributaria: infoTributaria;
+  infoFactura: infoFactura;
+  detalles: {
+    detalle: detalle[];
+  };
+  reembolsos: {
+    reembolsoDetalle: reembolsoDetalle[];
+  };
+  retenciones: {
+    retencion: retencion[];
+  };
+  tipoNegociable: {
+    correo: {
+      _text: string;
     };
-    infoTributaria: infoTributaria;
-    infoFactura: infoFactura;
-    detalles: {
-      detalle: detalle[];
+  };
+  maquinaFiscal: {
+    marca: {
+      _text: string;
     };
-    reembolsos: {
-      reembolsoDetalle: reembolsoDetalle[];
+    modelo: {
+      _text: string;
     };
-    retenciones: {
-      retencion: retencion[];
+    serie: {
+      _text: string;
     };
-    tipoNegociable: {
-      correo: {
-        _text: string;
-      };
-    };
-    maquinaFiscal: {
-      marca: {
-        _text: string;
-      };
-      modelo: {
-        _text: string;
-      };
-      serie: {
-        _text: string;
-      };
-    };
-    infoAdicional: {
-      campoAdicional: campoAdicional[];
-    };
+  };
+  infoAdicional: {
+    campoAdicional: campoAdicional[];
   };
 }
 
-interface infoTributaria {
+export interface infoTributaria {
   ambiente: {
     _text: string;
   };
@@ -84,7 +86,7 @@ interface infoTributaria {
     _text: string;
   };
 }
-interface infoFactura {
+export interface infoFactura {
   fechaEmision: {
     _text: string;
   };
@@ -200,7 +202,7 @@ interface infoFactura {
     _text: string;
   };
 }
-interface totalImpuesto {
+export interface totalImpuesto {
   codigo: {
     _text: string;
   };
@@ -223,7 +225,7 @@ interface totalImpuesto {
     _text: string;
   };
 }
-interface compensacion {
+export interface compensacion {
   codigo: {
     _text: string;
   };
@@ -234,7 +236,7 @@ interface compensacion {
     _text: string;
   };
 }
-interface pago {
+export interface pago {
   formaPago: {
     _text: string;
   };
@@ -248,7 +250,7 @@ interface pago {
     _text: string;
   };
 }
-interface detalle {
+export interface detalle {
   codigoPrincipal: {
     _text: string;
   };
@@ -283,13 +285,13 @@ interface detalle {
     impuesto: impuesto[];
   };
 }
-interface detAdicional {
+export interface detAdicional {
   _attributes: {
     nombre: string;
     valor: string;
   };
 }
-interface impuesto {
+export interface impuesto {
   codigo: {
     _text: string;
   };
@@ -306,7 +308,7 @@ interface impuesto {
     _text: string;
   };
 }
-interface reembolsoDetalle {
+export interface reembolsoDetalle {
   tipoIdentificacionProveedorReembolso: {
     _text: string;
   };
@@ -344,7 +346,7 @@ interface reembolsoDetalle {
     compensacionReembolso: compensacionReembolso[];
   };
 }
-interface detalleImpuesto {
+export interface detalleImpuesto {
   codigo: {
     _text: string;
   };
@@ -361,7 +363,7 @@ interface detalleImpuesto {
     _text: string;
   };
 }
-interface compensacionReembolso {
+export interface compensacionReembolso {
   codigo: {
     _text: string;
   };
@@ -372,7 +374,7 @@ interface compensacionReembolso {
     _text: string;
   };
 }
-interface retencion {
+export interface retencion {
   codigo: {
     _text: string;
   };
@@ -386,7 +388,7 @@ interface retencion {
     _text: string;
   };
 }
-interface campoAdicional {
+export interface campoAdicional {
   _attributes: {
     nombre: string;
   };

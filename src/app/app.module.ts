@@ -7,7 +7,11 @@ import { SplitterModule } from 'primeng/splitter';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SplitterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SplitterModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
